@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-jpf525
+- code: "jpf525"
 title: "SquidGameProbability"
 version: 1.0.0
 date-released: 2022-02-19
