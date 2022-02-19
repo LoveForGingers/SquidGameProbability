@@ -1,0 +1,30 @@
+import random
+
+def generateTrialOutcome(numberOfSteps):
+    i = 0
+    successfulSteps = 0
+    while i < numberOfSteps:
+        successfulSteps += random.randint(0,1)
+        i += 1
+    return successfulSteps
+
+def main():
+    participantNumber = 16
+    numberOfSteps = 18
+    numberOfItterations = 10**5
+    
+    sumOfSuccesses = 0
+    trial = 0
+    while trial < numberOfItterations:
+        print("trial # " + str(trial))
+        trialOutcome = generateTrialOutcome(numberOfSteps)
+        if trialOutcome < participantNumber:
+            sumOfSuccesses += 1
+        trial += 1
+
+    print("# of sumOfSuccesses " + str(sumOfSuccesses))
+    print("probability of success " + str((sumOfSuccesses*100/numberOfItterations)))
+
+
+if __name__ == "__main__":
+    main()
